@@ -8,7 +8,7 @@ from pprint import pprint
 def main():
     # In order not to store the login/password in the code - auth with json-formatted text file:
     # {"username": "username", "password": "password"}
-    txt_path = r"G:\Scripts\py_test\USGS\m2mAPI\json_pass.txt"
+    txt_path = r"json_pass.txt"
     with open(txt_path, 'r') as file:
         json_data = json.load(file)
         usgs_username = json_data['username']
@@ -16,13 +16,27 @@ def main():
 
     api = usgsMethods()  # instance created
     api.login(usgs_username, usgs_password)
-    api.loud_mode = True
 
     # show your permissions
     permissions = api.permissions()
     print(f"Your login permissions is {permissions['data']}", end='\n' * 2)
 
-    datasetName = 'LANDSAT_8_C1'
+    api.loud_mode = True
+
+    catalog = 'EE'  # NASA EarthExplorer
+    search = api.datasetSearch(catalog)
+    collections = search["data"]
+    print(len(collections), 'collections')
+    collections = [d for d in collections if 'landsat' in d["collectionName"].lower() or 'sentinel' in d["collectionName"].lower()]
+    print('filtered to', len(collections), 'landsat/sentinel collections')
+    collections = sorted(collections, key=lambda d: (str(d["datasetCategoryName"]), str(d["collectionName"])))
+    print('Categories:')
+    print('\n'.join(sorted(set('* ' + d["datasetCategoryName"] for d in collections if d["datasetCategoryName"] is not None))))
+    print('Datasets:')
+    print('\n'.join(sorted(set(f'* {d["collectionName"]:30s} {d["datasetAlias"]}' for d in collections))))
+
+    # datasetName = 'LANDSAT_8_C2'
+    datasetName = 'SENTINEL_2A'
 
     # Let's find some scenes by location!
     # Region of interest coordinates. Too long coordinates list may throw 404 HTTP errors!
@@ -62,6 +76,8 @@ def main():
         [59.19852, 63.06039],
     ]]
 
+    print('Searching ROI in dataset', datasetName)
+
     geoJson = usgsDataTypes.GeoJson(type='Polygon', coordinates=ROI)
     spatialFilter = usgsDataTypes.SpatialFilterGeoJson(filterType='geojson', geoJson=geoJson)
     acquisitionFilter = usgsDataTypes.AcquisitionFilter(start="2020-07-30", end="2020-07-31")
@@ -72,8 +88,6 @@ def main():
                                             metadataFilter=None,
                                             seasonalFilter=None,
                                             spatialFilter=spatialFilter)
-    # print('sceneFilter=')
-    # pprint(sceneFilter)
 
     sceneSearchResult = api.sceneSearch(datasetName=datasetName, maxResults=1, startingNumber=None,
                                         metadataType='full',
@@ -84,8 +98,6 @@ def main():
                                         bulkListName=None,
                                         orderListName=None,
                                         excludeListName=None)
-    # print('sceneSearchResult=')
-    # pprint(sceneSearchResult)
 
     print(f"\nDownloading:")
 
@@ -96,8 +108,8 @@ def main():
 
         print(f"The file size of {productName} with entityId={entityId} is {filesize} bytes", end='\n' * 2)
 
-        results = otherMethods.download(api, datasetName=datasetName, entityIds=entityId, productName=productName,
-                                        output_dir=r'G:\!Download')
+        results = otherMethods.download(api, datasetName=datasetName, entityId=entityId, productName=productName,
+                                        output_dir=r'downloads')
         print(results)
 
     api.logout()

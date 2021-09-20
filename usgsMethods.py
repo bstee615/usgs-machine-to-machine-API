@@ -555,7 +555,10 @@ class usgsMethods:
         url = f'{self.apiURL}permissions'
         response = requests.post(url, headers={'X-Auth-Token': self.apiKey})
         _check_response(response)
-        return response.json()
+        response_data = response.json()
+        if self.loud_mode:
+            print(f'Permissions successful. response: {response_data}')
+        return response_data
 
     def sceneListAdd(self, listId, datasetName, idField=None, entityId=None, entityIds=None, timeToLive=None):
         """

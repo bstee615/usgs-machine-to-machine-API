@@ -1,0 +1,420 @@
+{
+    "requestId": 424658288,
+    "version": "stable",
+    "sessionId": 91467267,
+    "data": {
+        "results": [
+            {
+                "browse": [
+                    {
+                        "id": "5e83a42ca2265449",
+                        "browseRotationEnabled": null,
+                        "browseName": "Standard Browse",
+                        "browsePath": "https://ims.cr.usgs.gov/browse/s2/s2b/2020/07/30/L1C_T41WMN_A017750_20200730T074614.jpg",
+                        "overlayPath": "https://ims.cr.usgs.gov/wms.py?service=WMS&request=GetMap&map=sentinel_2a&layers=L1C_T41WMN_A017750_20200730T074614",
+                        "overlayType": "ims_wms",
+                        "thumbnailPath": "https://ims.cr.usgs.gov/thumbnail/s2/s2b/2020/07/30/L1C_T41WMN_A017750_20200730T074614.jpg"
+                    }
+                ],
+                "cloudCover": "34.41680",
+                "entityId": "10757721",
+                "displayId": "L1C_T41WMN_A017750_20200730T074614",
+                "orderingId": null,
+                "metadata": [
+                    {
+                        "id": "5e83a42c39c4f7f",
+                        "fieldName": "Entity ID",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#entity_id",
+                        "value": "L1C_T41WMN_A017750_20200730T074614"
+                    },
+                    {
+                        "id": "5e83a42d218d45bf",
+                        "fieldName": "Acquisition Start Date",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#acquisition_date_start",
+                        "value": "2020-07-30T07:46:14.459Z"
+                    },
+                    {
+                        "id": "5e83a42d69b63d6a",
+                        "fieldName": "Acquisition End Date",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#acquisition_date_end",
+                        "value": "2020-07-30T07:55:12.017Z"
+                    },
+                    {
+                        "id": "5e83a42dadd5ed6d",
+                        "fieldName": "Tile Number",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2#.htmltile_number",
+                        "value": "T41WMN"
+                    },
+                    {
+                        "id": "5e83a42de32748cb",
+                        "fieldName": "Cloud Cover",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#cloud_cover",
+                        "value": "34.41680"
+                    },
+                    {
+                        "id": "5e83a42db59f5234",
+                        "fieldName": "Agency",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#agency",
+                        "value": "ESA"
+                    },
+                    {
+                        "id": "5e83a42d13f2cb47",
+                        "fieldName": "Platform",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#platform",
+                        "value": "SENTINEL-2B"
+                    },
+                    {
+                        "id": "5e83a42d5ef76715",
+                        "fieldName": "Vendor",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#vendor",
+                        "value": "EPAE"
+                    },
+                    {
+                        "id": "5e83a42c15371d5f",
+                        "fieldName": "Vendor Tile ID",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#vendor_tile_id",
+                        "value": "L1C_T41WMN_A017750_20200730T074614"
+                    },
+                    {
+                        "id": "5e83a42d8d4fb40d",
+                        "fieldName": "Orbit Number",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#sensing_orbit_number",
+                        "value": 135
+                    },
+                    {
+                        "id": "5e83a42d8ac013b2",
+                        "fieldName": "Orbit Direction",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#sensing_orbit_direction",
+                        "value": "Descending Orbit"
+                    },
+                    {
+                        "id": "5e83a42d1706e00",
+                        "fieldName": "Vendor Software Version",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#vendor_software_version",
+                        "value": "02.09"
+                    },
+                    {
+                        "id": "5e83a42d77bfce35",
+                        "fieldName": "Production Date",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#production_date",
+                        "value": "2020-07-30T09:05:52.000000Z"
+                    },
+                    {
+                        "id": "5e83a42d76653311",
+                        "fieldName": "Vendor Product ID",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#vendor_product_id",
+                        "value": "S2B_MSIL1C_20200730T074619_N0209_R135_T41WMN_20200730T090552"
+                    },
+                    {
+                        "id": "5e83a42d3ceb9850",
+                        "fieldName": "Archiving Center",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#archiving_center",
+                        "value": "EPA_"
+                    },
+                    {
+                        "id": "5e83a42d44e4da66",
+                        "fieldName": "Datatake Type",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#datatake_type",
+                        "value": "INS-NOBS"
+                    },
+                    {
+                        "id": "5e83a42d3883d33e",
+                        "fieldName": "Datatake Identifier",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#datatake_identifier",
+                        "value": "GS2B_20200730T074619_017750_N02.09"
+                    },
+                    {
+                        "id": "5e83a42de78de1af",
+                        "fieldName": "Data Type",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#data_type",
+                        "value": "UINT16"
+                    },
+                    {
+                        "id": "5e83a42dca572d4f",
+                        "fieldName": "Product Type",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#product_type",
+                        "value": "S2MSI1C"
+                    },
+                    {
+                        "id": "5e83a42db16f5b42",
+                        "fieldName": "Product Format",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#product_format",
+                        "value": "JPEG2000"
+                    },
+                    {
+                        "id": "5e83a42d148ce523",
+                        "fieldName": "Processing Level",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#processing_level",
+                        "value": "LEVEL-1C"
+                    },
+                    {
+                        "id": "5e83a42d9312f00b",
+                        "fieldName": "Datastrip ID",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#datastrip_id",
+                        "value": "S2B_OPER_MSI_L1C_DS_EPAE_20200730T090552_S20200730T074614_N02.09"
+                    },
+                    {
+                        "id": "5e83a42da2a44d60",
+                        "fieldName": "Datum",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#datum",
+                        "value": "WGS84"
+                    },
+                    {
+                        "id": "5e83a42dc16416e6",
+                        "fieldName": "Map Projection",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#map_projection",
+                        "value": "UTM"
+                    },
+                    {
+                        "id": "5e83a42c3b5af344",
+                        "fieldName": "UTM Zone",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#utm_zone",
+                        "value": "41N"
+                    },
+                    {
+                        "id": "5e83a42d2a41d7b5",
+                        "fieldName": "EPSG Code",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#epsg_code",
+                        "value": "32641"
+                    },
+                    {
+                        "id": "5e83a42d3bdb7ed9",
+                        "fieldName": "Resolution",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#resolution",
+                        "value": "10, 20, 60"
+                    },
+                    {
+                        "id": "5e83a42dff86490c",
+                        "fieldName": "Units",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#units",
+                        "value": "METER"
+                    },
+                    {
+                        "id": "5e83a42d70a4a70b",
+                        "fieldName": "Sun Zenith Angle Mean",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#sun_zenith_angle_mean",
+                        "value": "46.9784565563716"
+                    },
+                    {
+                        "id": "5e83a42d4c1adab5",
+                        "fieldName": "Sun Azimuth Angle  Mean",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#sun_azimuth_angle_mean",
+                        "value": "177.7472168425070"
+                    },
+                    {
+                        "id": "5e83a42cb7da865e",
+                        "fieldName": "Quantification",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#quantification",
+                        "value": 10000
+                    },
+                    {
+                        "id": "6075c452dd5d0a31",
+                        "fieldName": "Image_Referencing",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#image_reference",
+                        "value": "U"
+                    },
+                    {
+                        "id": "5e83a42d1e2e9f36",
+                        "fieldName": "Center Latitude",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "65&deg;19'33.14\"N"
+                    },
+                    {
+                        "id": "5e83a42d7d3d388e",
+                        "fieldName": "Center Longitude",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "62&deg;01'51.29\"E"
+                    },
+                    {
+                        "id": "5e83a42dc9e78fdd",
+                        "fieldName": "NW Corner Lat",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "65&deg;48'21.31\"N"
+                    },
+                    {
+                        "id": "5e83a42c56c362fe",
+                        "fieldName": "NW Corner Long",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "60&deg;48'43.50\"E"
+                    },
+                    {
+                        "id": "5e83a42dc694f99b",
+                        "fieldName": "NE  Corner Lat",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "65&deg;49'17.05\"N"
+                    },
+                    {
+                        "id": "5e83a42c534fccfb",
+                        "fieldName": "NE  Corner Long",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "63&deg;12'48.78\"E"
+                    },
+                    {
+                        "id": "5e83a42d8b1d050a",
+                        "fieldName": "SE Corner Lat",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "64&deg;50'10.47\"N"
+                    },
+                    {
+                        "id": "5e83a42dd79e7d0e",
+                        "fieldName": "SE Corner Long",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "63&deg;12'20.56\"E"
+                    },
+                    {
+                        "id": "5e83a42d9019418b",
+                        "fieldName": "SW Corner Lat",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "64&deg;49'17.18\"N"
+                    },
+                    {
+                        "id": "5e83a42dee85e366",
+                        "fieldName": "SW Corner Long",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_degrees",
+                        "value": "60&deg;53'32.33\"E"
+                    },
+                    {
+                        "id": "5e83a42d20e79958",
+                        "fieldName": "Center Latitude dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "65.3258714"
+                    },
+                    {
+                        "id": "5e83a42dd3ac783a",
+                        "fieldName": "Center Longitude dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "62.0309139"
+                    },
+                    {
+                        "id": "5e83a42d5f89d8ab",
+                        "fieldName": "NW  Corner Lat dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "65.8059182"
+                    },
+                    {
+                        "id": "5e83a42d733f61e1",
+                        "fieldName": "NW Corner Long dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "60.8120825"
+                    },
+                    {
+                        "id": "5e83a42d6d759c66",
+                        "fieldName": "NE Corner Lat dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "65.8214035"
+                    },
+                    {
+                        "id": "5e83a42cfbb34dfd",
+                        "fieldName": "NE Corner Long dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "63.2135496"
+                    },
+                    {
+                        "id": "5e83a42c638d31ff",
+                        "fieldName": "SE Corner Lat dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "64.8362408"
+                    },
+                    {
+                        "id": "5e83a42db5d500a",
+                        "fieldName": "SE Corner Long dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "63.2057115"
+                    },
+                    {
+                        "id": "5e83a42d844a7f36",
+                        "fieldName": "SW Corner Lat dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "64.8214388"
+                    },
+                    {
+                        "id": "5e83a42d16f10ff",
+                        "fieldName": "SW Corner Long dec",
+                        "dictionaryLink": "https://lta.cr.usgs.gov/DD/Sentinel2.html#coordinates_decimal",
+                        "value": "60.8923143"
+                    }
+                ],
+                "hasCustomizedMetadata": null,
+                "options": {
+                    "bulk": true,
+                    "download": true,
+                    "order": true,
+                    "secondary": false
+                },
+                "selected": {
+                    "bulk": false,
+                    "compare": false,
+                    "order": false
+                },
+                "spatialBounds": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                60.8120825,
+                                64.8214388
+                            ],
+                            [
+                                60.8120825,
+                                65.8214035
+                            ],
+                            [
+                                63.2135496,
+                                65.8214035
+                            ],
+                            [
+                                63.2135496,
+                                64.8214388
+                            ],
+                            [
+                                60.8120825,
+                                64.8214388
+                            ]
+                        ]
+                    ]
+                },
+                "spatialCoverage": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                60.8923143,
+                                64.8214388
+                            ],
+                            [
+                                63.2057115,
+                                64.8362408
+                            ],
+                            [
+                                63.2135496,
+                                65.8214035
+                            ],
+                            [
+                                60.8120825,
+                                65.8059182
+                            ],
+                            [
+                                60.8923143,
+                                64.8214388
+                            ]
+                        ]
+                    ]
+                },
+                "temporalCoverage": {
+                    "endDate": "2020-07-30 00:00:00-05",
+                    "startDate": "2020-07-30 00:00:00-05"
+                },
+                "publishDate": "2020-08-17 22:12:34.21251-05"
+            }
+        ],
+        "recordsReturned": 1,
+        "totalHits": 2,
+        "totalHitsAccuracy": "calculated",
+        "isCustomized": false,
+        "numExcluded": 0,
+        "startingNumber": 1,
+        "nextRecord": 2
+    },
+    "errorCode": null,
+    "errorMessage": null
+}
