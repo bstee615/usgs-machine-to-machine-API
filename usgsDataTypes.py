@@ -240,6 +240,13 @@ class usgsDataTypes:
                 'label': label}
 
     @classmethod
+    def Download(cls, entityId, productId, datasetId, productName):
+        """
+        """
+        return {'entityId': entityId, 'productId': productId, 'datasetId': datasetId,
+                'productName': productName, }
+
+    @classmethod
     def DownloadQueueDownload(cls, downloadId, collectionName, datasetId, displayId, entityId, eulaCode, filesize,
                               label, productCode, productName, statusCode, statusText):
         """

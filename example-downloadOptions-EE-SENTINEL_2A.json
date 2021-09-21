@@ -1,0 +1,35 @@
+{
+    "requestId": 426110850,
+    "version": "stable",
+    "sessionId": 91695500,
+    "data": [
+        {
+            "id": "5e83a42c6eba8084",
+            "displayId": "L1C_T41WMN_A017750_20200730T074614",
+            "entityId": "10757721",
+            "datasetId": "5e83a42ca9977c30",
+            "available": true,
+            "filesize": 433788074,
+            "productName": "L1C Tile in JPEG2000 format",
+            "productCode": "D557",
+            "bulkAvailable": true,
+            "downloadSystem": "dds",
+            "secondaryDownloads": []
+        },
+        {
+            "id": "5e83a42ca4ab03e7",
+            "displayId": "L1C_T41WMN_A017750_20200730T074614",
+            "entityId": "10757721",
+            "datasetId": "5e83a42ca9977c30",
+            "available": true,
+            "filesize": 3227169,
+            "productName": "Full Resolution Browse in GeoTIFF format",
+            "productCode": "D564",
+            "bulkAvailable": true,
+            "downloadSystem": "wms",
+            "secondaryDownloads": []
+        }
+    ],
+    "errorCode": null,
+    "errorMessage": null
+}

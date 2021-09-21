@@ -367,7 +367,7 @@ class usgsMethods:
         return response.json()
 
     def downloadRequest(self, configurationCode=None, downloadApplication=None,
-                        downloads=None, dataPaths=None, label=None, systemId=False):
+                        downloads=None, dataPaths=None, label=None, systemId=False, returnAvailable=False):
         """
         This method is used to insert the requested downloads into the download queue and returns the available download URLs.
         :param configurationCode: (DownloadConfigurationCode) Used to customize the the download routine, primarily for testing

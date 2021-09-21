@@ -24,13 +24,15 @@ class otherMethods:
                 break
         if (datasetId, productId) == (None, None):
             logging.error(f"{datetime.now()} Can't find productName={productName} in datasetName={datasetName}")
+            return
 
         download = usgsDataTypes.Download(entityId=entityId, datasetId=datasetId, productId=productId,
                                           productName=productName)
         downloadRequest = api.downloadRequest(downloads=[download], returnAvailable=True)
 
         if downloadRequest['data']['failed'] != []:
-            logging.warning(f'{datetime.now()} downloadRequest failed see respond:\n{downloadRequest}')
+            logging.error(f'{datetime.now()} downloadRequest failed see respond:\n{downloadRequest}')
+            return
 
         availableDownloads = downloadRequest['data']['availableDownloads'] + \
                              downloadRequest['data']['preparingDownloads']
@@ -44,6 +46,9 @@ class otherMethods:
 
     @classmethod
     def _download(cls, url, output_dir, chunk_size=1024):
+        requests_log = logging.getLogger("requests.packages.urllib3")
+        requests_log.setLevel(logging.DEBUG)
+        requests_log.propagate = True
         with requests.get(url, stream=True, allow_redirects=True) as r:
             expected_file_size = int(r.headers['Content-Length'])
             with tqdm(desc="Downloading", total=expected_file_size, unit_scale=True, unit='B') as progressbar:

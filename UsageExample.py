@@ -101,7 +101,8 @@ def main():
 
     print(f"\nDownloading:")
 
-    productName = 'LandsatLook Quality Image'
+    # productName = 'LandsatLook Quality Image'
+    productName = 'L1C Tile in JPEG2000 format'
     for searchResult in sceneSearchResult['data']['results']:
         entityId = searchResult['entityId']
         filesize = otherMethods.request_filesize(api, datasetName=datasetName, productName=productName, entityId=entityId)
