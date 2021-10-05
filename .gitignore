@@ -130,3 +130,6 @@ dmypy.json
 
 # Credentials file for USGS EROS :)
 json_pass.txt
+
+# Custom files
+.idea
