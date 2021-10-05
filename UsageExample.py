@@ -3,6 +3,7 @@ from usgsDataTypes import usgsDataTypes
 from usgsMethods import usgsMethods
 from otherMethods import otherMethods
 from pprint import pprint
+import time
 
 
 def main():
@@ -80,7 +81,7 @@ def main():
 
     geoJson = usgsDataTypes.GeoJson(type='Polygon', coordinates=ROI)
     spatialFilter = usgsDataTypes.SpatialFilterGeoJson(filterType='geojson', geoJson=geoJson)
-    acquisitionFilter = usgsDataTypes.AcquisitionFilter(start="2020-07-30", end="2020-07-31")
+    acquisitionFilter = usgsDataTypes.AcquisitionFilter(start="2020-07-01", end="2020-07-31")
     sceneFilter = usgsDataTypes.SceneFilter(acquisitionFilter=acquisitionFilter,
                                             cloudCoverFilter=None,
                                             datasetName=datasetName,
@@ -89,7 +90,7 @@ def main():
                                             seasonalFilter=None,
                                             spatialFilter=spatialFilter)
 
-    sceneSearchResult = api.sceneSearch(datasetName=datasetName, maxResults=1, startingNumber=None,
+    sceneSearchResult = api.sceneSearch(datasetName=datasetName, maxResults=10, startingNumber=None,
                                         metadataType='full',
                                         sortField=None,
                                         sortDirection='ASC',
@@ -99,22 +100,56 @@ def main():
                                         orderListName=None,
                                         excludeListName=None)
 
+    # print(json.dumps(sceneSearchResult['data']['results'], indent=2))
+    print(len(sceneSearchResult['data']['results']), 'results')
+    print('\n'.join('* ' + r["displayId"] for r in sceneSearchResult['data']['results']))
+
     print(f"\nDownloading:")
+    
+    all_begin = time.time()
+
+    filesizes = []
+    runtimes = []
+    entityIds = []
+    displayIds = []
 
     # productName = 'LandsatLook Quality Image'
     productName = 'L1C Tile in JPEG2000 format'
     for searchResult in sceneSearchResult['data']['results']:
+        entityIds.append(searchResult["entityId"])
+        displayIds.append(searchResult["displayId"])
         entityId = searchResult['entityId']
         filesize = otherMethods.request_filesize(api, datasetName=datasetName, productName=productName, entityId=entityId)
 
         print(f"The file size of {productName} with entityId={entityId} is {filesize} bytes", end='\n' * 2)
+        filesizes.append(filesize)
 
+        begin = time.time()
         results = otherMethods.download(api, datasetName=datasetName, entityId=entityId, productName=productName,
                                         output_dir=r'downloads')
+        end = time.time()
+        runtime = end-begin
+        runtimes.append(runtime)
+        print('Download time:', runtime)
         print(results)
 
     api.logout()
+    all_end = time.time()
     print('Done!')
+    all_runtime = all_end-all_begin
+    print('Total time:', all_runtime)
+    
+    results = {
+        "all_runtime": all_runtime,
+        "runtimes": runtimes,
+        "filesizes": filesizes,
+        "entityIds": entityIds,
+        "displayIds": displayIds,
+    }
+    print(f'Average download time: {sum(runtimes) / len(runtimes):.3f}s')
+    print(f'Average download size: {(sum(filesize) / len(filesize))/1e6:,.3f}MB')
+    with open('results.json', 'w') as f:
+        json.dump(results, f, indent=2)
 
 
 if __name__ == '__main__':
