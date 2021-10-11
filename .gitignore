@@ -133,3 +133,7 @@ json_pass.txt
 
 # Custom files
 .idea
+
+profile_hot
+profile_cold
+results.json
