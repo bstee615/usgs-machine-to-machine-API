@@ -49,9 +49,14 @@ class otherMethods:
         requests_log = logging.getLogger("requests.packages.urllib3")
         requests_log.setLevel(logging.DEBUG)
         requests_log.propagate = True
+        import time
+        begin = time.time()
         with requests.get(url, stream=True, allow_redirects=True) as r:
             expected_file_size = int(r.headers['Content-Length'])
             with tqdm(desc="Downloading", total=expected_file_size, unit_scale=True, unit='B') as progressbar:
+                end = time.time()
+                runtime = end-begin
+                print('Initial GET request time:', runtime)
                 file_name = r.headers['Content-Disposition'].split('"')[1]
                 file_path = os.path.join(output_dir, file_name)
                 with open(file_path, 'wb') as f:
