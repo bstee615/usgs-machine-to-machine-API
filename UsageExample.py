@@ -81,7 +81,7 @@ def main():
 
     geoJson = usgsDataTypes.GeoJson(type='Polygon', coordinates=ROI)
     spatialFilter = usgsDataTypes.SpatialFilterGeoJson(filterType='geojson', geoJson=geoJson)
-    acquisitionFilter = usgsDataTypes.AcquisitionFilter(start="2019-07-01", end="2019-07-31")
+    acquisitionFilter = usgsDataTypes.AcquisitionFilter(start="2020-06-01", end="2020-06-31")
     sceneFilter = usgsDataTypes.SceneFilter(acquisitionFilter=acquisitionFilter,
                                             cloudCoverFilter=None,
                                             datasetName=datasetName,
@@ -90,7 +90,7 @@ def main():
                                             seasonalFilter=None,
                                             spatialFilter=spatialFilter)
 
-    sceneSearchResult = api.sceneSearch(datasetName=datasetName, maxResults=1, startingNumber=None,
+    sceneSearchResult = api.sceneSearch(datasetName=datasetName, maxResults=10, startingNumber=None,
                                         metadataType='full',
                                         sortField=None,
                                         sortDirection='ASC',
@@ -147,8 +147,10 @@ def main():
             "entityIds": entityIds,
             "displayIds": displayIds,
         }
-        print(f'Average download time: {sum(runtimes) / len(runtimes):.3f}s')
-        print(f'Average download size: {(sum(filesizes) / len(filesizes))/1e6:,.3f}MB')
+        if len(runtimes) > 0:
+            print(f'Average download time: {sum(runtimes) / len(runtimes):.3f}s')
+        if len(filesizes) > 0:
+            print(f'Average download size: {(sum(filesizes) / len(filesizes))/1e6:,.3f}MB')
         with open('results.json', 'w') as f:
             json.dump(results, f, indent=2)
     print('Done!')
